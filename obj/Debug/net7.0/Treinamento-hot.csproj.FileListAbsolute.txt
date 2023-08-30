@@ -1,0 +1,15 @@
+D:\GitHub\Treinamento-hot\obj\Debug\net7.0\Treinamento-hot.csproj.AssemblyReference.cache
+D:\GitHub\Treinamento-hot\obj\Debug\net7.0\Treinamento-hot.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\Treinamento-hot\obj\Debug\net7.0\Treinamento-hot.AssemblyInfoInputs.cache
+D:\GitHub\Treinamento-hot\obj\Debug\net7.0\Treinamento-hot.AssemblyInfo.cs
+D:\GitHub\Treinamento-hot\obj\Debug\net7.0\Treinamento-hot.csproj.CoreCompileInputs.cache
+D:\GitHub\Treinamento-hot\bin\Debug\net7.0\Treinamento-hot.exe
+D:\GitHub\Treinamento-hot\bin\Debug\net7.0\Treinamento-hot.deps.json
+D:\GitHub\Treinamento-hot\bin\Debug\net7.0\Treinamento-hot.runtimeconfig.json
+D:\GitHub\Treinamento-hot\bin\Debug\net7.0\Treinamento-hot.dll
+D:\GitHub\Treinamento-hot\bin\Debug\net7.0\Treinamento-hot.pdb
+D:\GitHub\Treinamento-hot\obj\Debug\net7.0\Treinamento-hot.dll
+D:\GitHub\Treinamento-hot\obj\Debug\net7.0\refint\Treinamento-hot.dll
+D:\GitHub\Treinamento-hot\obj\Debug\net7.0\Treinamento-hot.pdb
+D:\GitHub\Treinamento-hot\obj\Debug\net7.0\Treinamento-hot.genruntimeconfig.cache
+D:\GitHub\Treinamento-hot\obj\Debug\net7.0\ref\Treinamento-hot.dll
