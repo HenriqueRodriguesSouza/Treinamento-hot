@@ -1,38 +1,46 @@
 ﻿public class Teste
 {
-    static void Main(string[] args)
+    public static void Main(string[] args)
     {
         Usuario usuario = new Usuario
         {
-            Nome = "Joao",
-            Email = "joapedro@test.com",
-            SenhaEncriptografada = "senhasegura",
-            TipoDeUsuario = (UsuarioTipoEnum)0,
+            Nome = "Pedro",
+            Email = "pedrofraga@test.com",
+            SenhaCriptografada = "senhasegura",
+            TipoDoCliente = (TipoDoClienteEnum)0,
         };
 
-        Categoria categoria = new Categoria { Id = 1, Descricao = "Direito" };
-        Idioma idioma = new Idioma { Id = 1, Descricao = "Portugues - Brasileiro" };
+        Idioma idioma = new Idioma { Id = 1, Descricao = "Portugues - BR" };
         Pais pais = new Pais { Id = 1, Descricao = "Brasil" };
-
+        Categoria categoria = new Categoria { Id = 1, Descricao = "Direito" };
 
         Produto produto = new Produto
-        {   
-            UsuarioCriador = usuario,
-            Nome = "Produto1",
-            Descricao = "Descricao",
-            CategoriaProduto = categoria, 
-            IdiomaDoProduto = idioma , 
-            PrincipalPais = pais ,
+        {
+            UsuarioCriadorDoProduto = usuario,
+            NomeProduto = "Loren",
+            DescricaoProduto = "Ipsum",
+            IdiomaProduto = idioma,
+            PaisProduto = pais,
+            ImagemProdutoUrl = "https://chat.openai.com/c/4733d5cf-2ded-45d9-a13f-4959245c7b90",
+            CategoriaProduto = categoria,
         };
 
-        System.Console.WriteLine(produto.Id);
-        System.Console.WriteLine(produto.Nome);
-        System.Console.WriteLine(produto.UsuarioCriador?.Nome);
-        System.Console.WriteLine(produto.CategoriaProduto?.Descricao);
-        System.Console.WriteLine(produto.PrincipalPais?.Descricao);
-        System.Console.WriteLine(produto.IdiomaDoProduto?.Descricao);
+        //Usuario
         System.Console.WriteLine(usuario.Id);
-        System.Console.WriteLine(usuario.TipoDeUsuario);
+        System.Console.WriteLine(usuario.Nome);
+        System.Console.WriteLine(usuario.Email);
+        System.Console.WriteLine(usuario.SenhaCriptografada);
+        System.Console.WriteLine(usuario.TipoDoCliente);
+
+        //Produto
+        System.Console.WriteLine(produto.Id);
+        System.Console.WriteLine(produto.UsuarioCriadorDoProduto?.Nome);
+        System.Console.WriteLine(produto.NomeProduto);
+        System.Console.WriteLine(produto.DescricaoProduto);
+        System.Console.WriteLine(produto.IdiomaProduto.Descricao);
+        System.Console.WriteLine(produto.PaisProduto.Descricao);
+        System.Console.WriteLine(produto.ImagemProdutoUrl);
+        System.Console.WriteLine(produto.CategoriaProduto.Descricao);
     }
 }
 
@@ -41,55 +49,52 @@ public class Usuario
     public Guid Id { get; set; } = Guid.NewGuid();
     public string Nome { get; set; } = string.Empty;
     public string Email { get; set; } = string.Empty;
-    public string SenhaEncriptografada { get; set; } = string.Empty;
-    public UsuarioTipoEnum? TipoDeUsuario { get; set; }
-    public DateTime? DataHoraCriacao { get; set; }
-    public DateTime? DataHoraAlteracao { get; set; }
+    public string SenhaCriptografada { get; set; } = string.Empty;
+    public TipoDoClienteEnum? TipoDoCliente { get; set; }
+    public DateTime? HoraDataCriacao { get; set; } = DateTime.UtcNow;
+    public DateTime? HoraDataAlteracao { get; set; } = DateTime.UtcNow;
 }
 
-public enum UsuarioTipoEnum
+public enum TipoDoClienteEnum
 {
-    Comprador,
     Vendedor,
+    Comprador
 }
 
 public class Produto
 {
     public Guid Id { get; set; } = Guid.NewGuid();
-    public Usuario? UsuarioCriador { get; set; } = null;
-    public string Nome { get; set; } = string.Empty;
-    public string Descricao { get; set; } = string.Empty;
-    public Idioma? IdiomaDoProduto { get; set; }
-    public Pais? PrincipalPais { get; set; }
+    public Usuario? UsuarioCriadorDoProduto { get; set; } = null;
+    public string NomeProduto { get; set; } = string.Empty;
+    public string DescricaoProduto { get; set; } = string.Empty;
+    public Idioma? IdiomaProduto { get; set; }
+    public Pais? PaisProduto { get; set; }
     public string ImagemProdutoUrl { get; set; } = string.Empty;
     public Categoria? CategoriaProduto { get; set; }
-    public DateTime? DataHoraCriacao { get; set; }
-    public DateTime? DataHoraAlteracao { get; set; }
-
+    public DateTime? HoraDataCriacao { get; set; } = DateTime.UtcNow;
+    public DateTime? HoraDataAlteracao { get; set; } = DateTime.UtcNow;
 }
 
 public class Idioma
 {
     public int Id { get; set; }
     public string Descricao { get; set; } = string.Empty;
-    public DateTime? DataHoraCriacao { get; set; }
-    public DateTime? DataHoraAlteracao { get; set; }
+    public DateTime? HoraDataCriacao { get; set; } = DateTime.UtcNow;
+    public DateTime? HoraDataAlteracao { get; set; } = DateTime.UtcNow;
 }
 
 public class Pais
 {
     public int Id { get; set; }
     public string Descricao { get; set; } = string.Empty;
-    public DateTime? DataHoraCriacao { get; set; }
-    public DateTime? DataHoraAlteracao { get; set; }
+    public DateTime? HoraDataCriacao { get; set; } = DateTime.UtcNow;
+    public DateTime? HoraDataAlteracao { get; set; } = DateTime.UtcNow;
 }
 
 public class Categoria
 {
     public int Id { get; set; }
     public string Descricao { get; set; } = string.Empty;
-    public DateTime? DataHoraCriacao { get; set; }
-    public DateTime? DataHoraAlteracao { get; set; }
+    public DateTime? HoraDataCriacao { get; set; } = DateTime.UtcNow;
+    public DateTime? HoraDataAlteracao { get; set; } = DateTime.UtcNow;
 }
-
-
