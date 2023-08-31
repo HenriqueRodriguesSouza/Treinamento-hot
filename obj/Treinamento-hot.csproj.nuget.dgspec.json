@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\GitHub\\Treinamento-hot\\Treinamento-hot.csproj": {}
+    "D:\\GitHub\\Treinamento-hot\\Treinamento-hot.csproj": {}
   },
   "projects": {
-    "d:\\GitHub\\Treinamento-hot\\Treinamento-hot.csproj": {
+    "D:\\GitHub\\Treinamento-hot\\Treinamento-hot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\GitHub\\Treinamento-hot\\Treinamento-hot.csproj",
+        "projectUniqueName": "D:\\GitHub\\Treinamento-hot\\Treinamento-hot.csproj",
         "projectName": "Treinamento-hot",
-        "projectPath": "d:\\GitHub\\Treinamento-hot\\Treinamento-hot.csproj",
+        "projectPath": "D:\\GitHub\\Treinamento-hot\\Treinamento-hot.csproj",
         "packagesPath": "C:\\Users\\Henrique Souza\\.nuget\\packages\\",
-        "outputPath": "d:\\GitHub\\Treinamento-hot\\obj\\",
+        "outputPath": "D:\\GitHub\\Treinamento-hot\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
