@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "Treinamento-hot/1.0.0": {
+      "test/1.0.0": {
         "runtime": {
-          "Treinamento-hot.dll": {}
+          "test.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Treinamento-hot/1.0.0": {
+    "test/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
