@@ -4,27 +4,35 @@ using System.Xml.Schema;
 
 public class Programa
 {
-    public static int Palindromo(int Numero)
+    public static bool Palindromo(int NumeroPalindromo)
     {
-        string NumeroString = Numero.ToString();
+        string NumeroString = NumeroPalindromo.ToString();
         char[] charArray = NumeroString.ToCharArray();
         Array.Reverse(charArray);
         string reverseArray = new string(charArray);
 
-        if (nuero == reverseArray)
+        if (NumeroString == reverseArray)
         {
-            System.Console.WriteLine(" verdade");
+            System.Console.WriteLine("verdade para " + NumeroPalindromo);
+            return true;
         }
         else
         {
-            System.Console.WriteLine(" falso");
+            NumeroPalindromo++;
+            return Palindromo(NumeroPalindromo);
         }
 
-        return Numero;
     }
+
+    public static int Primo(int NumeroPrimo)
+    {
+
+        return NumeroPrimo;
+    }
+
     static void Main(string[] args)
     {
-        Palindromo(1000);
+        Palindromo(5556);
     }
 
 }
