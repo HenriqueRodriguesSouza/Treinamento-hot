@@ -15,7 +15,6 @@ public class Programa
 
         if (NumeroString == reverseArray)
         {
-            System.Console.WriteLine("verdade para " + NumeroPalindromo);
             Valor = Int32.Parse(reverseArray);
             return Primo(Valor);
 
@@ -32,39 +31,36 @@ public class Programa
     {
         if (Numero <= 1)
         {
-            System.Console.WriteLine("nao e primo");
             Valor++;
-            return Palindromo(Valor); // 0 and 1 are not prime numbers
+            return Palindromo(Valor);
         }
         if (Numero <= 3)
         {
-            System.Console.WriteLine("e primo");
-            return true; // 2 and 3 are prime numbers
+            return Palindromo(Valor); 
         }
         if (Numero % 2 == 0 || Numero % 3 == 0)
         {
-            System.Console.WriteLine("nao e primo");
             Valor++;
-            return Palindromo(Valor); // Numbers divisible by 2 or 3 are not prime
+            return Palindromo(Valor);
         }
 
-        // Check for prime by testing divisors up to the square root of the number
         for (int i = 5; i * i <= Numero; i += 6)
         {
             if (Numero % i == 0 || Numero % (i + 2) == 0)
             {
-                System.Console.WriteLine("nao e primo");
                 Valor++;
-                return Palindromo(Valor); // Number is divisible by i or i+2, not prime
+                return Palindromo(Valor);
             }
         }
-        System.Console.WriteLine("e primo");
-        return true; // Number is prime
+        System.Console.WriteLine("O valor " + Valor +" é primo e palindromo");
+        return true; 
     }
 
     static void Main(string[] args)
     {
-        Palindromo(1000);
+        System.Console.Write("Digite um numero que mostrarei qual numero apos ele é palindromo e também primo: ");
+        int digitado = Convert.ToInt32(Console.ReadLine());
+        Palindromo(digitado);
     }
 
 }
